@@ -1,0 +1,17 @@
+:root {
+    --main-color: rgb(255, 250, 250);
+    --text-color: rgb(178, 157, 157);/
+    --sub-color: rgb(161, 172, 178);
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+#title{
+    color: var(--text-color);
+}
+
+#posts{
+    background-color: var(--sub-color);
+}
