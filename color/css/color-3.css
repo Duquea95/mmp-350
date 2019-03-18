@@ -1,10 +1,10 @@
-/* Color Scheme 1: Triad*/
+/* Color Scheme 3: Complementary*/
 
 :root {
-    --main-color: rgb(255, 250, 250);
-    --text-color: rgb(178, 157, 157);
-    --sub-color: rgb(161, 172, 178);
-    --link-color: rgb(180, 195, 204);
+    --main-color: #A2B3FF;
+    --text-color: #B2994E;
+    --sub-color: #5F6FB2;
+    --link-color: #FFE7A2;
 }
 
 body{
