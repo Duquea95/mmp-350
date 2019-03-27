@@ -1,0 +1,55 @@
+#container {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, max-content);
+	grid-gap: 1em;
+
+	grid-template-areas:
+		"header menu menu"
+		"signup signup login"
+		"post post post"
+		"posts posts posts"
+}
+
+#title {
+	grid-area: header;
+  font-size: 24px;
+}
+
+#menu {
+	grid-area: menu;
+}
+
+#posts {
+	grid-area: posts;
+}
+
+#post {
+	grid-area: post;
+	margin: 0 auto;
+}
+.post{
+    margin: 15px;
+}
+.post-text, .post-info{
+    text-align: center;
+}
+.post-text{
+    font-size: 20px;
+}
+.post-info{
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+#login {
+	grid-area: login;
+}
+
+#sign-up {
+	grid-area: signup;
+}

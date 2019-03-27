@@ -1,0 +1,25 @@
+/* Color Scheme 3: Complementary*/
+
+:root {
+    --main-color: #A2B3FF;
+    --text-color: #B2994E;
+    --sub-color: #5F6FB2;
+    --link-color: #FFE7A2;
+}
+
+body{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+#title{
+    color: var(--text-color);
+}
+
+#posts{
+  border: 2px solid var(--sub-color);
+}
+
+a{
+  color: var(--link-color);
+}

@@ -1,0 +1,25 @@
+/* Color Scheme 1: Triad*/
+
+:root {
+    --main-color: rgb(255, 250, 250);
+    --text-color: rgb(178, 157, 157);
+    --sub-color: rgb(161, 172, 178);
+    --link-color: rgb(180, 195, 204);
+}
+
+body{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+#title{
+    color: var(--text-color);
+}
+
+#posts{
+  border: 2px solid var(--sub-color);
+}
+
+a{
+  color: var(--link-color);
+}

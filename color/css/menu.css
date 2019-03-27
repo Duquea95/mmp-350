@@ -1,0 +1,21 @@
+/* Menu Flex Box */
+#menu-list{
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+#menu-list li{
+    margin-top: 2em;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    align-items: baseline;
+}
+
+#menu-list a{
+    text-decoration: none;
+}
