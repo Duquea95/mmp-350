@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+div.grid-container{
+    display: grid;
+    grid-template-areas:
+    'myArea myArea myArea'
+    'main main main'
+    'footer footer footer';
+}
+header{
+    grid-area: myArea;
+    background-color: black;
+    color: white;
+    padding: 0 3%;
+}
+div.nav-left{
+    display: inline-block;
+}
+div.nav-right{
+    display: inline-block;
+}
+div.nav-right li{
+    display: inline-block;
+}
