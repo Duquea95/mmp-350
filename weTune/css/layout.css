@@ -1,27 +1,115 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 div.grid-container{
     display: grid;
+    grid-template-rows: 50px 560px 50px;
+    /* grid-template-column: 50px 400px 200px; */
     grid-template-areas:
-    'myArea myArea myArea'
+    'nav nav nav'
     'main main main'
     'footer footer footer';
 }
-header{
-    grid-area: myArea;
+
+/* Navbar */
+nav{
+    align-items: center;
+    grid-area: nav;
     background-color: black;
     color: white;
-    padding: 0 3%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+    'logo menu login';
+    padding-left: 3%;
 }
 div.nav-left{
-    display: inline-block;
+    grid-area: logo;
+    /* padding-left: 3%; */
+}
+div.nav-mid{
+    grid-area: menu;
+    display: none;
 }
 div.nav-right{
-    display: inline-block;
+    grid-area: login;
 }
-div.nav-right li{
-    display: inline-block;
+/* Logout */
+button#log-out{
+    visibility: hidden;
+}
+/* Main */
+main{
+    grid-area: main;
+    grid-template-columns: 100%;
+}
+.main-news{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 300px;
+    align-items: flex-end;
+    text-align: right;
+    grid-template-areas:
+    'mainCard subCards';
+}
+.main-card{
+    grid-area: mainCard;
+}
+.sub-cards{
+    grid-area: subCards;
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    align-items: flex-end;
+    text-align: right;
+    grid-template-areas:
+    'sub1'
+    'sub2'
+    'sub3';
+}
+.sub-card-1{
+    grid-area: sub1;
+}
+.sub-card-2{
+    grid-area: sub2;
+}
+.sub-card-3{
+    grid-area: sub3;
+}
+/* Home Hero */
+
+footer{
+    grid-area: footer;
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+    'copyright space social';
+    padding-left: 3%;
+    padding-right: 2%;
+}
+
+footer-left{
+    grid-area: copyright;
+}
+footer-mid{
+    grid-area: space;
+}
+footer-right{
+    grid-area: social;
+}
+
+ul.footer-socials{
+    display: grid;
+}
+
+ul.footer-socials{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    /* justify-content: space-evenly; */
 }

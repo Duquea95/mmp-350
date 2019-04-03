@@ -1,0 +1,22 @@
+ul.nav-menu, ul.nav-login{
+    display: flex;
+    align-items: baseline;
+}
+ul.nav-menu{
+    justify-content: space-around;
+}
+ul.nav-login{
+    justify-content: space-evenly;
+}
+#user-info{
+    display: none;
+}
+
+.logged-in #user-info{
+    display: block;
+}
+
+.logged-in #signUp,
+.logged-in #login{
+    display: none;
+}
