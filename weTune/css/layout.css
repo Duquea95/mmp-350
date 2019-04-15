@@ -15,16 +15,22 @@ div.grid-container{
 }
 /* Navbar */
 nav{
-    align-items: center;
     grid-area: nav;
     background-color: black;
     color: white;
-    display: grid;
-    grid-template-columns: 20% 55% 25%;
-    grid-template-areas:
-    'logo none login';
-    padding-left: 3%;
+    /* grid-column-gap: 5%; */
+    /* padding-left: 3%; */
     overflow: hidden;
+}
+div.nav-container{
+    align-items: center;
+    display: grid;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'logo login';
 }
 div.nav-login{
     z-index: 1;
@@ -79,18 +85,18 @@ form h2{
     width: inherit;
     margin: 5%  auto;
 }
-.form-inputs{
+/* .form-inputs{
     width: 100%;
-}
+} */
 .input-label{
     width: 49%;
     display: inline-block;
 }
 .form-inputs input{
     width: 49%;
-    height: 3em;
+    height: 5em;
     display: inline-block;
-    margin: 3% auto;
+    margin: 1% auto;
     border-radius: 5px;
 }
 
