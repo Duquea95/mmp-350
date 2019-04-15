@@ -2,18 +2,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 div.grid-container{
     display: grid;
-    grid-template-rows: 50px 560px 50px;
-    /* grid-template-column: 50px 400px 200px; */
+    grid-template-rows: 70px 540px 50px;
     grid-template-areas:
     'nav nav nav'
     'main main main'
+    /* 'info info info' */
     'footer footer footer';
+    overflow: hidden;
 }
-
 /* Navbar */
 nav{
     align-items: center;
@@ -21,17 +20,24 @@ nav{
     background-color: black;
     color: white;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 20% 55% 25%;
     grid-template-areas:
-    'logo menu login';
+    'logo none login';
     padding-left: 3%;
+    overflow: hidden;
 }
+div.nav-login{
+    z-index: 1;
+}
+li{
+    list-style: none;
+}
+
 div.nav-left{
     grid-area: logo;
-    /* padding-left: 3%; */
 }
 div.nav-mid{
-    grid-area: menu;
+    /* grid-area: menu; */
     display: none;
 }
 div.nav-right{
@@ -44,26 +50,140 @@ button#log-out{
 /* Main */
 main{
     grid-area: main;
-    grid-template-columns: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'none registration';
+    overflow: hidden;
 }
-.main-news{
+#registration{
+    /* width: inherit; */
+    grid-area: registration;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: 'none form';
+}
+div.form-container{
+    grid-area: form;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 'none' 'inputs';
+}
+form h2{
+    text-align: center;
+}
+#registration form{
+    grid-area: inputs;
+    align-self: flex-start;
+}
+form h2{
+    width: inherit;
+    margin: 5%  auto;
+}
+.form-inputs{
+    width: 100%;
+}
+.input-label{
+    width: 49%;
+    display: inline-block;
+}
+.form-inputs input{
+    width: 49%;
+    height: 3em;
+    display: inline-block;
+    margin: 3% auto;
+    border-radius: 5px;
+}
+
+input.email-input{
+    width: 100%;
+}
+/* .main-news{
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 300px;
+    grid-template-rows: 560px 400px;
     align-items: flex-end;
     text-align: right;
     grid-template-areas:
-    'mainCard subCards';
+    'mainCard subCards'
+    'reg reg';
 }
-.main-card{
+.main-card {
     grid-area: mainCard;
+    background-image: url("../assets/alex.jpg");
+    background-size: cover;
+}
+.registration-wrapper{
+    grid-area: reg;
+}
+.sub-card-1, .sub-card-2, .sub-card-3, .main-card{
+    height: 100%;
+    position: relative;
+}
+.card-overlay, .sub-overlay{
+    height: 100%;
+    border: 1px solid black;
+    display: grid;
+
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+.text-overlay{
+    width: 100%;
+    height: 25%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-areas:
+    'text';
+}
+.subText-overlay{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 25%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    align-self: center;
+    text-align: right;
+    display: grid;
+    grid-template-areas:
+    'subText';
+}
+.sub-text, .trans-text{
+    align-self: center;
+}
+.sub-text{
+    grid-area: subText;
+    padding-right: 1.2em;
+}
+.trans-text{
+    grid-area: text;
+    padding: 0 1.2em;
+}
+.text-overlay{
+    text-align: left;
+}
+.sub-card{
+    background-size: cover;
+    background-position: top;
 }
 .sub-cards{
     grid-area: subCards;
     display: grid;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-rows: 187px 187px 187px;
     align-items: flex-end;
-    text-align: right;
     grid-template-areas:
     'sub1'
     'sub2'
@@ -71,28 +191,27 @@ main{
 }
 .sub-card-1{
     grid-area: sub1;
+    background-image: url("../assets/kev.jpg");
 }
 .sub-card-2{
     grid-area: sub2;
+    background-image: url("../assets/andres.jpg");
 }
 .sub-card-3{
     grid-area: sub3;
-}
-/* Home Hero */
-
+    background-image: url("../assets/tony.jpg");
+} */
 footer{
     grid-area: footer;
     align-items: center;
     background-color: black;
-    color: white;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-areas:
     'copyright space social';
-    padding-left: 3%;
-    padding-right: 2%;
+    padding: 0 3%;
+    position: static;
 }
-
 footer-left{
     grid-area: copyright;
 }
@@ -102,7 +221,6 @@ footer-mid{
 footer-right{
     grid-area: social;
 }
-
 ul.footer-socials{
     display: grid;
 }

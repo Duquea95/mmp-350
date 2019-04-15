@@ -27,46 +27,39 @@
                         WeTune
                     </div>
                 </div>
-                <div class="nav-mid">
-                    <ul class="nav-menu">
-                        <li>Home</li>
-                        <li>Profile</li>
-                        <li>Browse</li>
-                    </ul>
-                </div>
                 <div class="nav-right">
-                    <ul class="nav-login">
-                        <li><a>Login</a></li>
-                        <li><a>Sign Up</a></li>
-                    </ul>
+                    <div class="nav-login">
+                        <div class="">
+                            Email
+                            <input type="text" name="login_email">
+                        </div>
+                        <div class="">
+                            Password
+                            <input type="text" name="login_password">
+                        </div>
+                    </div>
                 </div>
             </nav>
             <main>
-                <div class="main-news">
-                    <div class="main-card">
-                        <div class="">
-                            <p>Create Your Profile</p>
-                        </div>
-                    </div>
-                    <div class="sub-cards">
-                        <div class="sub-card-1">
-                            <p>Interact with other musicians using the forums</p>
-                        </div>
-                        <div class="sub-card-2">
-                            <p>Create Public or Private Events and Invite your friends</p>
-                        </div>
-                        <div class="sub-card-3">
-                            <p>Look For Others to Collaborate on Projects</p>
-                        </div>
+                <div id="registration">
+                    <div class="form-container">
+                        <form class="register-form" action="index.html" method="post">
+                            <h2>Register for An Account Today!</h2>
+                            <div class="form-inputs">
+                                <div class="input-label">First Name</div>
+                                <div class="input-label">Last Name</div>
+                                <input type="text" name="First Name">
+                                <input type="text" name="Last Name">
+                                <div class="input-label">Email</div>
+                                <input class="email-input" type="text" name="Email">
+                                <select class="" name="">
+                                    <option value="January">January</option>
+                                </select>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <!-- <div id="user-info">
-                    <div id="display-name"></div>
-                    <button id="log-out">Log Out</button>
-                </div>
-                <div class="">
 
-                </div> -->
             </main>
             <footer>
                 <div class="footer-left">
@@ -75,9 +68,15 @@
                 <div class="footer-mid"></div>
                 <div class="footer-right">
                     <ul class="footer-socials">
-                        <li><span>Twitter</span></li>
-                        <li><span>Facebook</span></li>
-                        <li><span>Instagram</span></li>
+                        <a href="">
+                            <li><span>Twitter</span></li>
+                        </a>
+                        <a href="">
+                            <li><span>Facebook</span></li>
+                        </a>
+                        <a href="">
+                            <li><span>Instagram</span></li>
+                        </a>
                     </ul>
                 </div>
             </footer>
@@ -86,3 +85,42 @@
         <script src="js/auth.js"></script>
     </body>
 </html>
+
+<!-- <div class="main-news">
+    <div class="main-card">
+        <div class="card-overlay"></div>
+        <div class="text-overlay">
+            <div class="trans-text">Welcome to WeTunes! Join Now to Create Your Profile and Start Looking For Other Artists and Friends</div>
+        </div>
+    </div>
+    <div class="registration-wrapper">
+        <p>Welcome to WeTune! Create an account and begin finding other musicians in your area to jam with.</p>
+        <input type="text" name="Email" value="Email">
+    </div>
+    <div class="sub-cards">
+        <div class="sub-card-1 sub-card">
+            <div class="sub-overlay"></div>
+            <div class="subText-overlay">
+                <div class="sub-text">
+                Interact with other musicians using the forums
+                </div>
+            </div>
+        </div>
+        <div class="sub-card-2 sub-card">
+            <div class="sub-overlay"></div>
+            <div class="subText-overlay">
+                <div class="sub-text">
+                    Create Public or Private Events and Invite your friends
+                </div>
+            </div>
+        </div>
+        <div class="sub-card-3 sub-card">
+            <div class="sub-overlay"></div>
+            <div class="subText-overlay">
+                <div class="sub-text">
+                Look For Others to Collaborate on Projects
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
