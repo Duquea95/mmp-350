@@ -7,7 +7,7 @@
 div.grid-container{
     display: grid;
     /* grid-template-rows: 80px 540px 40px; */
-    grid-template-rows: 80px 1080px 40px;
+    grid-template-rows: 80px auto 40px;
     grid-template-areas:
     'nav nav nav'
     'main main main'
@@ -18,7 +18,7 @@ div.grid-container{
 /* Navbar */
 nav{
     grid-area: nav;
-    background-color: rgb(60,210,128);
+    background-color: #2ecc71;
     color: black;
     /* grid-column-gap: 5%; */
     /* padding-left: 3%; */
@@ -102,7 +102,8 @@ main{
     grid-template-areas: 'none registration'
     'info info';
     overflow: hidden;
-    background-color: rgba(0, 0, 0, .1);
+    /* background-color: rgb(30, 30, 30); */
+    background-color: #ecf0f1;
 }
 #registration{
     /* width: inherit; */
@@ -117,16 +118,13 @@ div.form-container{
     grid-template-rows: 5% 90% 5%;
     grid-template-areas: 'none' 'inputs';
 }
-form h2{
-    text-align: center;
-}
 #registration form{
     grid-area: inputs;
     align-self: flex-start;
 }
-form h2{
+form h1{
     width: inherit;
-    margin: .5em auto;
+    margin: 1em auto;
 }
 .select-birthday{
     margin: 1em 0;
@@ -167,19 +165,13 @@ div.info-container{
     margin: 0 auto;
     grid-area: info;
     display: grid;
-    grid-template-columns: 50% 50%;
-    border-top: 1px solid black;
-}
-.table-description, .info-table{
-    margin: 3em 0;
-    width: 540px;
-    text-align: center;
+    grid-template-rows: 550px 550px;
 }
 .table-head{
     width: 100%;
 }
 .info-table td{
-    width: 180px;
+    /* width: 180px; */
 }
 .info-table img{
     width: 125px;
@@ -188,19 +180,50 @@ div.info-container{
     width: 540px;
 }
 .info-text{
-    padding: 2em;
-    background-color: white;
+    background-image: url("../assets/bg-img-1.jpg");
+    background-size: cover;
+}
+.table-container{
+    width: 80%;
+    /* padding: 2em; */
+    margin: 0 auto;
+}
+.table-container, .table-grid{
+    height: 100%;
+}
+.table-grid{
+    display: grid;
+    grid-template-rows: 40% 10% 50%;
+    grid-template-columns: 25% 50% 25%;
+    align-items: center;
+    grid-template-areas:
+    'none none none'
+    'tHead thead thead'
+    'tIcons tIcons tIcons';
+}
+.table-description{
+    grid-area: thead;
+    width: 60%;
+    text-align: center;
+}
+.info-table{
+    grid-area: tIcons;
+}
+.table-description, .info-table{
+    /* margin: 0 auto; */
+    /* width: 540px; */
+    /* text-align: center; */
 }
 .info-img{
     background-image: url("../assets/alex.jpg");
     background-size: cover;
     background-position: left;
-    /* width: 600px; */
+    background-attachment: inherit;
 }
 footer{
     grid-area: footer;
     width: 100%;
-    background-color: rgb(60,210,128);
+    background-color: #2ecc71;
 }
 .footer-container, .footer-container a{
     color: black;
