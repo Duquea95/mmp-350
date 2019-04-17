@@ -29,16 +29,24 @@
                         </div>
                     </div>
                     <div class="nav-right">
-                        <div class="nav-login">
-                            <div class="">
-                                Email
-                                <input type="text" name="login_email">
-                            </div>
-                            <div class="">
-                                Password
-                                <input type="text" name="login_password">
-                            </div>
-                        </div>
+                        <form class="nav-login" action="index.html" method="post">
+                            <table>
+                                <tr>
+                                    <td>Email or Phone</td>
+                                    <td>Password</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="login-table"><input id="login-email" type="text" name="login_email"></td>
+                                    <td class="login-table"><input id="login-password" type="text" name="login_password"></td>
+                                    <td class="login-wrap"><input class="login-button" value="Log in" type="submit" name="login-button"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="forget-password">Forgot Password?</td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
                 </div>
             </nav>
@@ -46,31 +54,29 @@
                 <div id="registration">
                     <div class="form-container">
                         <form class="register-form" action="index.html" method="post">
-                            <h2>Register for An Account Today!</h2>
+                            <h1>Create a New Account</h1>
                             <div class="form-inputs">
-                                <!-- <div class="input-label">First Name</div>
-                                <div class="input-label">Last Name</div> -->
-                                <input type="text" name="First Name" placeholder="First Name">
-                                <input type="text" name="Last Name" placeholder="Last Name">
-                                <input class="email-input" name="Email" placeholder="Mobile Number or Email ">
-                                <input class="email-input" name="Password" placeholder="Password">
+                                <input id="sign-up-firstname"type="text" name="First Name" placeholder="First Name">
+                                <input id="sign-up-lastname"type="text" name="Last Name" placeholder="Last Name">
+                                <input id="sign-up-email" class="email-input" name="Email" placeholder="Mobile Number or Email">
+                                <input id="sign-up-password" class="email-input" name="Password" placeholder="Password">
                                 <div class="select-birthday">
-                                    <div class="input-label">Birthday</div>
-                                    <select class="birth-month" name="birth-month">
-                                        <option value="January">January</option>
-                                        <option value="February">February</option>
-                                        <option value="March">March</option>
-                                        <option value="April">April</option>
+                                    <h3>Birthday</h3>
+                                    <select id="birth-month" name="birth-month">
+                                        <option value="Jan">Jan</option>
+                                        <option value="Feb">Feb</option>
+                                        <option value="Mar">Mar</option>
+                                        <option value="Apr">Apr</option>
                                         <option value="May">May</option>
                                         <option value="June">June</option>
                                         <option value="July">July</option>
-                                        <option value="August">August</option>
-                                        <option value="September">September</option>
-                                        <option value="October">October</option>
-                                        <option value="November">November</option>
-                                        <option value="December">December</option>
+                                        <option value="Aug">Aug</option>
+                                        <option value="Sept">Sept</option>
+                                        <option value="Oct">Oct</option>
+                                        <option value="Nov">Nov</option>
+                                        <option value="Dec">Dec</option>
                                     </select>
-                                    <select class="birth-day" name="birth-day">
+                                    <select id="birth-day" name="birth-day">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -103,7 +109,7 @@
                                         <option value="29">29</option>
                                         <option value="30">30</option>
                                     </select>
-                                    <select class="birth-year" name="birth-year">
+                                    <select id="birth-year" name="birth-year">
                                         <option value="2002">2002</option>
                                         <option value="2001">2001</option>
                                         <option value="2000">2000</option>
@@ -139,28 +145,50 @@
                                         <option value="1970">1970</option>
                                     </select>
                                 </div>
+                                <p class="terms-text">By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time</p>
+                                <input class="join-button" value="Sign Up" type="submit" name="join-button">
                             </div>
                         </form>
                     </div>
                 </div>
+                <div class="info-container">
+                    <div class="info-text">
+                        <h3 class="table-description">Join WeTunes to connect with artists around the world</h3>
+                        <table class="info-table">
+                            <tr class="info-icons-row">
+                                <td><img src="assets/friend-icon.png" alt="Connect with friends"></td>
+                                <td><img src="assets/chat-icon.png" alt="Direct message all your friends"></td>
+                                <td><img src="assets/events.png" alt="Schedule or promote events"></td>
+                            </tr>
+                            <tr>
+                                <td>Connect with musicians</td>
+                                <td>Send direct messages</td>
+                                <td>Create events</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="info-img">
+                    </div>
+                </div>
             </main>
             <footer>
-                <div class="footer-left">
-                    <p>WeTunes 2019 - Present</p>
-                </div>
-                <div class="footer-mid"></div>
-                <div class="footer-right">
-                    <ul class="footer-socials">
-                        <a href="">
-                            <li><span>Twitter</span></li>
-                        </a>
-                        <a href="">
-                            <li><span>Facebook</span></li>
-                        </a>
-                        <a href="">
-                            <li><span>Instagram</span></li>
-                        </a>
-                    </ul>
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <p>Copyright © 2019 - WeTunes. All rights reserved.</p>
+                    </div>
+                    <div class="footer-right">
+                        <ul class="footer-socials">
+                            <a href="">
+                                <li><span>Twitter</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Facebook</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Instagram</span></li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </footer>
         </div>

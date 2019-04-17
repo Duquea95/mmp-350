@@ -2,10 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Helvetica';
 }
 div.grid-container{
     display: grid;
-    grid-template-rows: 70px 540px 50px;
+    /* grid-template-rows: 80px 540px 40px; */
+    grid-template-rows: 80px 1080px 40px;
     grid-template-areas:
     'nav nav nav'
     'main main main'
@@ -16,24 +18,22 @@ div.grid-container{
 /* Navbar */
 nav{
     grid-area: nav;
-    background-color: black;
-    color: white;
+    background-color: rgb(60,210,128);
+    color: black;
     /* grid-column-gap: 5%; */
     /* padding-left: 3%; */
     overflow: hidden;
 }
 div.nav-container{
+    /* padding-top: 13px; */
     align-items: center;
     display: grid;
     height: 100%;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-areas:
     'logo login';
-}
-div.nav-login{
-    z-index: 1;
 }
 li{
     list-style: none;
@@ -41,13 +41,52 @@ li{
 
 div.nav-left{
     grid-area: logo;
-}
-div.nav-mid{
-    /* grid-area: menu; */
-    display: none;
+    padding-left: 5%;
 }
 div.nav-right{
     grid-area: login;
+    /* text-align: right; */
+}
+.nav-login table{
+    /* width: 100%; */
+    justify-items: end;
+}
+.login-wrap{
+    background-color: rgb(54,171,113);
+    text-align: center;
+    border: 1px black solid;
+}
+.login-button{
+    background: none;
+    border: 0;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    width: 40px;
+}
+.register-form h1{
+    font-size: 2em;
+    font-weight: 400;
+}
+td{
+    font-size: .9em;
+    height: 20px;
+}
+tr td{
+    padding: 0 .3em;
+}
+.login-table input{
+    height: 24px;
+    padding: 3px;
+    padding-bottom: 4px;
+    width: 142px;
+    border: 1px solid black;
+    border-radius: 2px;
 }
 /* Logout */
 button#log-out{
@@ -57,21 +96,25 @@ button#log-out{
 main{
     grid-area: main;
     display: grid;
+    grid-template-rows: 538px 542px;
+    grid-row-gap: 40px;
     grid-template-columns: 50% 50%;
-    grid-template-areas: 'none registration';
+    grid-template-areas: 'none registration'
+    'info info';
     overflow: hidden;
+    background-color: rgba(0, 0, 0, .1);
 }
 #registration{
     /* width: inherit; */
     grid-area: registration;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 15% 60% 25%;
     grid-template-areas: 'none form';
 }
 div.form-container{
     grid-area: form;
     display: grid;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
     grid-template-areas: 'none' 'inputs';
 }
 form h2{
@@ -83,146 +126,100 @@ form h2{
 }
 form h2{
     width: inherit;
-    margin: 5%  auto;
+    margin: .5em auto;
 }
-/* .form-inputs{
-    width: 100%;
-} */
-.input-label{
-    width: 49%;
-    display: inline-block;
+.select-birthday{
+    margin: 1em 0;
+}
+.terms-text{
+    font-size: .8em;
 }
 .form-inputs input{
     width: 49%;
-    height: 5em;
+    height: 4.2em;
     display: inline-block;
-    margin: 1% auto;
+    margin: 1em auto;
+    border: 1px solid #B8BEBF;
     border-radius: 5px;
+    padding: 3px;
+    padding-bottom: 4px;
 }
-
+div.select-birthday h3{
+    margin-bottom: .5em;
+}
+div.select-birthday select{
+    border-radius: 5%;
+    background-color: #FFFFFF;
+    height: 3em;
+}
+.join-button{
+    background-color: rgb(3, 128, 35);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    height: 1.8em !important;
+}
 input.email-input{
     width: 100%;
 }
-/* .main-news{
+div.info-container{
+    width: 100%;
+    margin: 0 auto;
+    grid-area: info;
     display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 560px 400px;
-    align-items: flex-end;
-    text-align: right;
-    grid-template-areas:
-    'mainCard subCards'
-    'reg reg';
+    grid-template-columns: 50% 50%;
+    border-top: 1px solid black;
 }
-.main-card {
-    grid-area: mainCard;
+.table-description, .info-table{
+    margin: 3em 0;
+    width: 540px;
+    text-align: center;
+}
+.table-head{
+    width: 100%;
+}
+.info-table td{
+    width: 180px;
+}
+.info-table img{
+    width: 125px;
+}
+.info-icons-row{
+    width: 540px;
+}
+.info-text{
+    padding: 2em;
+    background-color: white;
+}
+.info-img{
     background-image: url("../assets/alex.jpg");
     background-size: cover;
+    background-position: left;
+    /* width: 600px; */
 }
-.registration-wrapper{
-    grid-area: reg;
-}
-.sub-card-1, .sub-card-2, .sub-card-3, .main-card{
-    height: 100%;
-    position: relative;
-}
-.card-overlay, .sub-overlay{
-    height: 100%;
-    border: 1px solid black;
-    display: grid;
-
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, .1);
-    overflow: hidden;
-}
-.text-overlay{
-    width: 100%;
-    height: 25%;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, .6);
-    color: white;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: grid;
-    grid-template-areas:
-    'text';
-}
-.subText-overlay{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 25%;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, .6);
-    color: white;
-    align-self: center;
-    text-align: right;
-    display: grid;
-    grid-template-areas:
-    'subText';
-}
-.sub-text, .trans-text{
-    align-self: center;
-}
-.sub-text{
-    grid-area: subText;
-    padding-right: 1.2em;
-}
-.trans-text{
-    grid-area: text;
-    padding: 0 1.2em;
-}
-.text-overlay{
-    text-align: left;
-}
-.sub-card{
-    background-size: cover;
-    background-position: top;
-}
-.sub-cards{
-    grid-area: subCards;
-    display: grid;
-    grid-template-rows: 187px 187px 187px;
-    align-items: flex-end;
-    grid-template-areas:
-    'sub1'
-    'sub2'
-    'sub3';
-}
-.sub-card-1{
-    grid-area: sub1;
-    background-image: url("../assets/kev.jpg");
-}
-.sub-card-2{
-    grid-area: sub2;
-    background-image: url("../assets/andres.jpg");
-}
-.sub-card-3{
-    grid-area: sub3;
-    background-image: url("../assets/tony.jpg");
-} */
 footer{
     grid-area: footer;
+    width: 100%;
+    background-color: rgb(60,210,128);
+}
+.footer-container, .footer-container a{
+    color: black;
+}
+.footer-container{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
     align-items: center;
-    background-color: black;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-column-gap: 20%;
+    grid-template-columns: 40% 40%;
     grid-template-areas:
-    'copyright space social';
+    'copyright social';
     padding: 0 3%;
     position: static;
 }
 footer-left{
     grid-area: copyright;
-}
-footer-mid{
-    grid-area: space;
 }
 footer-right{
     grid-area: social;
@@ -234,6 +231,6 @@ ul.footer-socials{
 ul.footer-socials{
     display: flex;
     align-items: baseline;
-    justify-content: space-around;
-    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
 }
