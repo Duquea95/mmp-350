@@ -4,21 +4,6 @@
         <meta charset="utf-8">
         <title>WeTune</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
-            apiKey: "AIzaSyBuziE76a1wuQSW_nYZGpwUb8BdX5Q_Eak",
-            authDomain: "wetune2.firebaseapp.com",
-            databaseURL: "https://wetune2.firebaseio.com",
-            projectId: "wetune2",
-            storageBucket: "wetune2.appspot.com",
-            messagingSenderId: "179590213655"
-          };
-          firebase.initializeApp(config);
-        </script>
     </head>
     <body>
         <div class="grid-container">
@@ -59,7 +44,7 @@
                             <div class="form-inputs">
                                 <!-- <input id="sign-up-firstname"type="text" name="First Name" placeholder="First Name">
                                 <input id="sign-up-lastname"type="text" name="Last Name" placeholder="Last Name"> -->
-                                <input id="sign-up-email" class="email-input" name="Email" placeholder="Mobile Number or Email">
+                                <input id="sign-up-email" class="email-input" name="Email" placeholder="Mobile Number or Email" value="email">
                                 <input id="sign-up-password" class="email-input" name="Password" placeholder="Password">
                                 <!-- <div class="select-birthday">
                                     <h3>Birthday</h3>
@@ -197,6 +182,21 @@
                 </div>
             </footer>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBuziE76a1wuQSW_nYZGpwUb8BdX5Q_Eak",
+            authDomain: "wetune2.firebaseapp.com",
+            databaseURL: "https://wetune2.firebaseio.com",
+            projectId: "wetune2",
+            storageBucket: "wetune2.appspot.com",
+            messagingSenderId: "179590213655"
+          };
+          firebase.initializeApp(config);
+        </script>
         <script src="js/jquery.js"></script>
         <script src="js/auth.js"></script>
     </body>
