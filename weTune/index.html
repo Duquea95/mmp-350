@@ -4,9 +4,6 @@
         <meta charset="utf-8">
         <title>WeTune</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
         <script>
           // Initialize Firebase
           var config = {
@@ -19,6 +16,9 @@
           };
           firebase.initializeApp(config);
         </script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
     </head>
     <body>
         <div class="grid-container">
@@ -54,7 +54,7 @@
             <main>
                 <div id="registration">
                     <div class="form-container">
-                        <form class="register-form" action="index.html" method="post">
+                        <form class="register-form" action="/user.html" method="post">
                             <h1>Create a New Account</h1>
                             <div class="form-inputs">
                                 <input id="sign-up-firstname"type="text" name="First Name" placeholder="First Name">
