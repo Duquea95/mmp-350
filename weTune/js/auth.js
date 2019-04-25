@@ -8,7 +8,7 @@ const userBirthDay = document.getElementById('birth-day');
 const userBirthYear = document.getElementById('birth-year');
 
 // Create user
-signUpButton.click = function createUser(){
+signUpButton.onclick = function createUser(){
     const email = signUpEmail.value;
     const password = signUpPassword.value;
     // const firstName = signUpFirstname;
@@ -51,7 +51,7 @@ const loginButton = document.getElementById('login-button');
 const loginEmail = document.getElementById('login-email');
 const loginPasword = document.getElementById('login-password');
 
-loginButton.click = function loginUser(){
+loginButton.onclick = function loginUser(){
     const email = loginEmail.value;
     const password = loginPassword.value;
 
