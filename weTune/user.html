@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>WeTune</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBuziE76a1wuQSW_nYZGpwUb8BdX5Q_Eak",
+            authDomain: "wetune2.firebaseapp.com",
+            databaseURL: "https://wetune2.firebaseio.com",
+            projectId: "wetune2",
+            storageBucket: "wetune2.appspot.com",
+            messagingSenderId: "179590213655"
+          };
+          firebase.initializeApp(config);
+        </script>
+    </head>
+    <body>
+        <div class="grid-container">
+            <!-- <nav class="navbar">
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <div class="nav-logo">
+                            WeTune
+                        </div>
+                    </div>
+                    <div class="nav-right">
+                        <form class="nav-login" action="index.html" method="post">
+                            <table>
+                                <tr>
+                                    <td>Email or Phone</td>
+                                    <td>Password</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="login-table"><input id="login-email" type="text" name="login_email"></td>
+                                    <td class="login-table"><input id="login-password" type="text" name="login_password"></td>
+                                    <td class="login-wrap"><input class="login-button" value="Log in" type="submit" name="login-button"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="forget-password">Forgot Password?</td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </nav> -->
+            <main>
+                <div id="user-info">
+                    <div id="display-name"></div>
+                    <ul id="user-menu">
+                        <li><a id="profile-link" href="">Profile</a></li>
+                    </ul>
+                    <button id="log-out">Log Out</button>
+                </div>
+                <div id="profile">
+                    <h1 id="profile-display-name"></h1>
+                </div>
+
+            </main>
+            <div id="profile">
+                <h1 id="profile-display-name"></h1>
+                <div id="profile-edit">
+                    <input id="profile-display-name-edit" placeholder="username">
+                    <button id="profile-display-name-update">Update</button>
+                </div>
+                <button id="edit">Edit</button>
+            </div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <p>Copyright © 2019 - WeTunes. All rights reserved.</p>
+                    </div>
+                    <div class="footer-right">
+                        <ul class="footer-socials">
+                            <a href="">
+                                <li><span>Twitter</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Facebook</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Instagram</span></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/profile.js"></script>
+    </body>
+</html>

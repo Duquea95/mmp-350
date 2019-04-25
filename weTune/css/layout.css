@@ -174,7 +174,7 @@ div.info-container{
     /* width: 180px; */
 }
 .info-table img{
-    width: 125px;
+    width: 150px;
 }
 .info-icons-row{
     width: 540px;
@@ -193,26 +193,26 @@ div.info-container{
 }
 .table-grid{
     display: grid;
-    grid-template-rows: 40% 10% 50%;
+    grid-template-rows: 30% 10% 50%;
     grid-template-columns: 25% 50% 25%;
     align-items: center;
     grid-template-areas:
     'none none none'
-    'tHead thead thead'
+    'tHead tHead tHead'
     'tIcons tIcons tIcons';
 }
 .table-description{
-    grid-area: thead;
-    width: 60%;
+    grid-area: tHead;
+    /* width: 65%; */
     text-align: center;
 }
 .info-table{
     grid-area: tIcons;
+    text-align: center;
 }
-.table-description, .info-table{
+.table-description{
     /* margin: 0 auto; */
     /* width: 540px; */
-    /* text-align: center; */
 }
 .info-img{
     background-image: url("../assets/alex.jpg");

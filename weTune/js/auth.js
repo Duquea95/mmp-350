@@ -1,75 +1,84 @@
-$(function(){
-    console.log("hello");
+const signUpButton = document.getElementById('join-button');
+const signUpFirstname = document.getElementById('sign-up-firstname');
+const signUpLastname = document.getElementById('sign-up-lastname');
+const signUpEmail = document.getElementById('sign-up-email');
+const signUpPassword = document.getElementById('sign-up-password');
+const userBirthMonth = document.getElementById('birth-month');
+const userBirthDay = document.getElementById('birth-day');
+const userBirthYear = document.getElementById('birth-year');
 
-        const signUpButton = $('.join-button');
-        const signUpFirstname = $('#sign-up-firstname');
-        const signUpLastname = $('#sign-up-lastname');
-        const signUpEmail = $('#sign-up-email');
-        const signUpPassword = $('#sign-up-password');
-        const userBirthMonth = $('#birth-month');
-        const userBirthDay = $('#birth-day');
-        const userBirthYear = $('#birth-year');
+// Create user
+signUpButton.onclick = function createUser(e){
+    const email = signUpEmail.value;
+    const password = signUpPassword.value;
+    // const firstName = signUpFirstname;
+    // const lastName = signUpLastname;
+    // const email = signUpEmail;
+    // const month = userBirthMonth;
+    // const day = userBirthDay;
+    // const year = userBirthYear;
+    console.log(email);
+    console.log(password);
 
-        // Create user
-        function createUser(){
-            const email = signUpEmail;
-            // const firstName = signUpFirstname;
-            // const lastName = signUpLastname;
-            const password = signUpPassword;
-            // const email = signUpEmail;
-            // const month = userBirthMonth;
-            // const day = userBirthDay;
-            // const year = userBirthYear;
+    firebase.auth().createUserWithEmailAndPassword(email, password);
 
-            firebase.auth().createUserWithEmailAndPassword(email, password);
+    const promise = auth.createUserWithEmailAndPassword(email, password)
 
-            const promise = auth.createUserWithEmailAndPassword(email, passwords)
+    promise.then(updateUser);
 
-            promise.then(updateUser);
+    promise.catch(function(error){
+        console.log(this);
+        alert("There was an error with creating a user");
+    });
 
-            promise.catch(function(error){
-                console.log(this);
-                alert("There was an error with creating a user");
-            });
-        }
+    e.preventDefault();
+}
+// signUpButton.onclick = createUser();
 
-        function updateUser(credential){
-            const userInfo = {
-                displayName: signUpEmail.value
-            };
-            credential.user.updateProfile(userInfo);
-            authState(credential.user)
-        }
+function updateUser(credential) {
+	const userInfo = {
+		displayName: signupUsername.value
+	};
+	credential.user.updateProfile(userInfo);
 
-        signUpButton.onClick = createUser();
+	/* add to database */
+	const db = firebase.database();
+	const ref = db.ref('users').child(credential.user.uid);
+	ref.update(userInfo);
+}
 
-        const loginButton = $('.login-button');
-        const loginEmail = $('#login-email');
-        const loginPasword = $('#login-password')
-        function loginUser(){
-            const email = loginEmail.value
-            const password = loginPassword.value
+const loginButton = document.getElementById('login-button');
+const loginEmail = document.getElementById('login-email');
+const loginPasword = document.getElementById('login-password');
 
-            firebase.auth().signInWithEmailAndPassword(email, password);
-        }
+loginButton.onclick = function loginUser(){
+    const email = loginEmail.value;
+    const password = loginPassword.value;
 
-        loginButton.onClick = loginUser();
+    firebase.auth().signInWithEmailAndPassword(email, password);
+};
+// loginButton.onclick = loginUser();
 
-        // auth State
-        const displayName = $('#display-name');
-        function authState(user){
-            if(user){
-                // console.log(user);
-                $('body').addClass('logged-in');
-                displayName.text("Hello, "+ username);
-            }
-        }
+// auth State
+const displayName = document.getElementById('display-name');
 
-        firebase.auth().onAuthStateChanged(authState);
+function authState(user) {
+    if (user) {
+        displayName.textContent = 'Hello, ' + user.displayName;
 
-        // Logout
-        const logoutButton = $('#logout');
-        logoutButton.onClick = function(){
-            firebase.auth.signOut();
-        }
-});
+        document.getElementById('profile-link').href = "/user.html?=" + user.uid;
+
+        document.body.classList.add('logged-in');
+
+    } else {
+        document.body.classList.remove('logged-in');
+    }
+}
+
+firebase.auth().onAuthStateChanged(authState);
+
+// Logout
+const logoutButton = $('logout');
+logoutButton.onClick = function(){
+    firebase.auth.signOut();
+}

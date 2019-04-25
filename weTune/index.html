@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <title>WeTune</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-	    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
         <script>
           // Initialize Firebase
           var config = {
@@ -39,7 +40,7 @@
                                 <tr>
                                     <td class="login-table"><input id="login-email" type="text" name="login_email"></td>
                                     <td class="login-table"><input id="login-password" type="text" name="login_password"></td>
-                                    <td class="login-wrap"><input class="login-button" value="Log in" type="submit" name="login-button"></td>
+                                    <td class="login-wrap"><input id="login-button" class="login-button" value="Log in" type="submit" name="login-button"></td>
                                 </tr>
                                 <tr>
                                     <td></td>
@@ -146,7 +147,7 @@
                                     </select>
                                 </div>
                                 <p class="terms-text">By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time</p>
-                                <input class="join-button" value="Sign Up" type="submit" name="join-button">
+                                <input id="join-button" class="join-button" value="Sign Up" action="/user.html" type="submit" name="join-button">
                             </div>
                         </form>
                     </div>
@@ -200,42 +201,3 @@
         <script src="js/auth.js"></script>
     </body>
 </html>
-
-<!-- <div class="main-news">
-    <div class="main-card">
-        <div class="card-overlay"></div>
-        <div class="text-overlay">
-            <div class="trans-text">Welcome to WeTunes! Join Now to Create Your Profile and Start Looking For Other Artists and Friends</div>
-        </div>
-    </div>
-    <div class="registration-wrapper">
-        <p>Welcome to WeTune! Create an account and begin finding other musicians in your area to jam with.</p>
-        <input type="text" name="Email" value="Email">
-    </div>
-    <div class="sub-cards">
-        <div class="sub-card-1 sub-card">
-            <div class="sub-overlay"></div>
-            <div class="subText-overlay">
-                <div class="sub-text">
-                Interact with other musicians using the forums
-                </div>
-            </div>
-        </div>
-        <div class="sub-card-2 sub-card">
-            <div class="sub-overlay"></div>
-            <div class="subText-overlay">
-                <div class="sub-text">
-                    Create Public or Private Events and Invite your friends
-                </div>
-            </div>
-        </div>
-        <div class="sub-card-3 sub-card">
-            <div class="sub-overlay"></div>
-            <div class="subText-overlay">
-                <div class="sub-text">
-                Look For Others to Collaborate on Projects
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
