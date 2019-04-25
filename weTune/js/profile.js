@@ -1,4 +1,4 @@
-const uid = location.search.split('=')[1];
+const uid = location.search.split('=')[4];
 const db = firebase.database();
 const ref = db.ref('users').child(uid);
 
