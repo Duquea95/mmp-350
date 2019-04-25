@@ -31,7 +31,7 @@ signUpButton.onclick = function createUser(e){
         alert("There was an error with creating a user");
     });
 
-    e.preventDefault();
+    // e.preventDefault();
 }
 // signUpButton.onclick = createUser();
 
