@@ -1,6 +1,7 @@
 const signUpButton = document.getElementById('join-button');
 const signUpFirstname = document.getElementById('sign-up-firstname');
 const signUpLastname = document.getElementById('sign-up-lastname');
+const signUpUsername = document.getElementById('sign-up-username');
 const signUpEmail = document.getElementById('sign-up-email');
 const signUpPassword = document.getElementById('sign-up-password');
 const userBirthMonth = document.getElementById('birth-month');
