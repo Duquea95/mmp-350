@@ -8,7 +8,7 @@ const userBirthDay = document.getElementById('birth-day');
 const userBirthYear = document.getElementById('birth-year');
 
 // Create user
-signUpButton.onclick = function createUser(e){
+function createUser(e){
     const email = signUpEmail.value;
     const password = signUpPassword.value;
     // const firstName = signUpFirstname;
@@ -33,7 +33,7 @@ signUpButton.onclick = function createUser(e){
 
     // e.preventDefault();
 }
-// signUpButton.onclick = createUser();
+signUpButton.onclick = createUser();
 
 function updateUser(credential) {
 	const userInfo = {
@@ -51,13 +51,13 @@ const loginButton = document.getElementById('login-button');
 const loginEmail = document.getElementById('login-email');
 const loginPasword = document.getElementById('login-password');
 
-loginButton.onclick = function loginUser(){
+function loginUser(){
     const email = loginEmail.value;
     const password = loginPassword.value;
 
     firebase.auth().signInWithEmailAndPassword(email, password);
 };
-// loginButton.onclick = loginUser();
+loginButton.onclick = loginUser();
 
 // auth State
 const displayName = document.getElementById('display-name');
