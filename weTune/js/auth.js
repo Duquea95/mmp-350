@@ -8,7 +8,7 @@ const userBirthDay = document.getElementById('birth-day');
 const userBirthYear = document.getElementById('birth-year');
 
 // Create user
-function createUser(e){
+function createUser(){
     const email = signUpEmail.value;
     const password = signUpPassword.value;
     // const firstName = signUpFirstname;
