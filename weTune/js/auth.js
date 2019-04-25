@@ -22,7 +22,7 @@ function createUser(){
 
     firebase.auth().createUserWithEmailAndPassword(email, password);
 
-    const promise = auth.createUserWithEmailAndPassword(email, password)
+    const promise = auth().createUserWithEmailAndPassword(email, password)
 
     promise.then(updateUser);
 
