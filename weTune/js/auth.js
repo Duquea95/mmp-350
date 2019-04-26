@@ -67,7 +67,7 @@ function authState(user) {
     if (user) {
         displayName.textContent = 'Hello, ' + user.displayName;
 
-        document.getElementById('profile-link').href = "/user.html?=" + user.uid;
+        document.getElementById('profile-link').href = "/mmp-350/weTune/user.html" + user.uid;
 
         document.body.classList.add('logged-in');
 
