@@ -3,10 +3,13 @@
       grid-template-rows: 80px auto 40px;
     }
     main{
-      grid-template-rows: 500px auto;
+      grid-template-rows: 550px auto;
     }
     div.info-container{
       grid-template-rows: 600px 800px;
+    }
+    .table-grid{
+      grid-template-rows: 40% 5% 55%;
     }
     .more-info{
         grid-area: moreInfo;
@@ -14,6 +17,5 @@
         background-image: url("../assets/bg-img-2.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        /* width: 80%; */
     }
 }
