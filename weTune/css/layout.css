@@ -96,8 +96,7 @@ button#log-out{
 main{
     grid-area: main;
     display: grid;
-    grid-template-rows: 538px auto;
-    /*grid-row-gap: 40px;*/
+    grid-template-rows: 568px auto;
     grid-template-columns: 100%;
     grid-template-areas: 'registration'
     'info';
