@@ -61,7 +61,7 @@ loginButton.onclick = function loginUser(){
 // loginButton.onclick = loginUser();
 
 // auth State
-const displayName = document.getElementById('display-name');
+const displayName = signUpUsername;
 
 function authState(user) {
     if (user) {
