@@ -96,7 +96,7 @@ button#log-out{
 main{
     grid-area: main;
     display: grid;
-    grid-template-rows: 538px 542px;
+    grid-template-rows: 538px auto;
     grid-row-gap: 40px;
     grid-template-columns: 50% 50%;
     grid-template-areas: 'none registration'
@@ -165,7 +165,8 @@ div.info-container{
     margin: 0 auto;
     grid-area: info;
     display: grid;
-    grid-template-rows: 550px 550px;
+    grid-template-rows: 600px 800px;
+    grid-template-areas: 'subInfo' 'moreInfo';
 }
 .table-head{
     width: 100%;
@@ -182,6 +183,14 @@ div.info-container{
 .info-text{
     background-image: url("../assets/bg-img-1.jpg");
     background-size: cover;
+    grid-area: subInfo;
+}
+.more-info{
+    grid-area: moreInfo;
+    background-color: #FFF;
+    background-image: url("../assets/bg-img-2.jpg");
+    background-size: cover;
+    height: auto;
 }
 .table-container{
     width: 80%;
@@ -193,7 +202,7 @@ div.info-container{
 }
 .table-grid{
     display: grid;
-    grid-template-rows: 30% 10% 50%;
+    grid-template-rows: 35% 5% 60%;
     grid-template-columns: 25% 50% 25%;
     align-items: center;
     grid-template-areas:
@@ -215,7 +224,7 @@ div.info-container{
     /* width: 540px; */
 }
 .info-img{
-    background-image: url("../assets/alex.jpg");
+    /* background-image: url("../assets/alex.jpg"); */
     background-size: cover;
     background-position: left;
     background-attachment: inherit;

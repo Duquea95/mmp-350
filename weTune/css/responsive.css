@@ -1,8 +1,8 @@
 @media only screen and (min-width: 1400px) {
     div.grid-container{
-        grid-template-rows: 80px 1280px 40px;
+        grid-template-rows: 80px auto 40px;
     }
     main{
-        grid-template-rows: 500px 780px;
+        grid-template-rows: 500px auto;
     }
 }
