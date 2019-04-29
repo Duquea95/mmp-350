@@ -5,4 +5,12 @@
     main{
         grid-template-rows: 500px auto;
     }
+    .more-info{
+        grid-area: moreInfo;
+        background-color: #FFF;
+        background-image: url("../assets/bg-img-2.jpg");
+        background-size: cover; 
+        background-repeat: no-repeat;
+        /* width: 80%; */
+    }
 }
