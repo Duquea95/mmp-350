@@ -2,6 +2,9 @@
     div.grid-container{
       grid-template-rows: 80px auto 40px;
     }
+    .form-container{
+        grid-template-rows: 0 100%;
+    }
     form h1{
         width: inherit;
         margin: 1em auto;

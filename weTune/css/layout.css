@@ -115,7 +115,7 @@ main{
 div.form-container{
     grid-area: form;
     display: grid;
-    grid-template-rows: 5% 90% 5%;
+    grid-template-rows: 4% 96%;
     grid-template-areas: 'none' 'inputs';
 }
 #registration form{
