@@ -1,4 +1,7 @@
 @media only screen and (min-width: 1400px) {
+    body{
+      /*background-color: #FFF;*/
+    }
     div.grid-container{
       grid-template-rows: 80px auto 40px;
     }
@@ -10,13 +13,20 @@
         margin: 1em auto;
     }
     main{
-      grid-template-rows: 550px auto;
+      grid-template-rows: 600px auto;
     }
     div.info-container{
-      grid-template-rows: 600px 800px;
+      grid-template-rows: 650px 850px;
+      grid-row-gap: 10em;
     }
     .table-grid{
-      grid-template-rows: 40% 5% 55%;
+      grid-template-rows: 10% 35% 55%;
+    }
+    .table-description{
+      align-self: flex-end;
+    }
+    .info-table{
+        align-self: flex-end;
     }
     .more-info{
         grid-area: moreInfo;
