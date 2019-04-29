@@ -189,8 +189,9 @@ div.info-container{
     grid-area: moreInfo;
     background-color: #FFF;
     background-image: url("../assets/bg-img-2.jpg");
-    background-size: cover;
-    height: auto;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    /* width: 80%; */
 }
 .table-container{
     width: 80%;
