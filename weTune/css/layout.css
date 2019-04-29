@@ -165,7 +165,7 @@ div.info-container{
     margin: 0 auto;
     grid-area: info;
     display: grid;
-    grid-template-rows: 600px 800px;
+    grid-template-rows: 700px 550px;
     grid-template-areas: 'subInfo' 'moreInfo';
 }
 .table-head{
@@ -203,7 +203,7 @@ div.info-container{
 }
 .table-grid{
     display: grid;
-    grid-template-rows: 35% 5% 60%;
+    grid-template-rows: 25% 15% 60%;
     grid-template-columns: 25% 50% 25%;
     align-items: center;
     grid-template-areas:
