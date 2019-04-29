@@ -124,7 +124,7 @@ div.form-container{
 }
 form h1{
     width: inherit;
-    margin: 1em auto;
+    margin: .4em auto;
 }
 .select-birthday{
     margin: 1em 0;
@@ -157,7 +157,7 @@ div.select-birthday select{
     font-size: 24px;
     height: 1.8em !important;
 }
-input.email-input{
+input.full-input{
     width: 100%;
 }
 div.info-container{
