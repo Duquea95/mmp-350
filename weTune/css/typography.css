@@ -1,7 +1,5 @@
-.text-overlay{
-    font-size: 1.2em;
-    letter-spacing: .12em;
-    line-height: 1.8em;
+.table-description{
+    font-size: 24px;       
 }
 footer, footer a{
     color: white;
