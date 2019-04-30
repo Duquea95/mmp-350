@@ -1,6 +1,18 @@
 .table-description{
-    font-size: 24px;       
+    font-size: 24px;
 }
 footer, footer a{
     color: white;
+}
+@media only screen and (min-width: 1400px) {
+    .table-description{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    input{
+        font-size: 12px;
+    }
+    .info-text-row{
+        font-size: 2em;
+    }
 }

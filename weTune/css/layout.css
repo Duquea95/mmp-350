@@ -78,7 +78,7 @@ td{
     height: 20px;
 }
 tr td{
-    padding: 0 .3em;
+    /*padding: 0 .3em;*/
 }
 .login-table input{
     height: 24px;
@@ -177,13 +177,12 @@ div.info-container{
     width: 100%;
 }
 .info-table td{
-    /* width: 180px; */
+     width: 180px; 
 }
 .info-table img{
     width: 150px;
 }
 .info-icons-row{
-    width: 540px;
 }
 .info-text{
     background-image: url("../assets/bg-img-1.jpg");

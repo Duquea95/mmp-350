@@ -10,10 +10,18 @@
     }
     form h1{
         width: inherit;
-        margin: 1em auto;
+        margin: .6em auto;
     }
     main{
       grid-template-rows: 600px auto;
+    }
+    .info-table img{
+        height: 200px;
+        width: auto;
+    }
+    .table-description{
+        font-size: 36px;
+        font-weight: bold;
     }
     div.info-container{
       grid-template-rows: 650px 850px;
