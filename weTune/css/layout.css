@@ -4,52 +4,85 @@
     padding: 0;
     font-family: 'Helvetica';
 }
+html, body{
+    height: 100%;
+    width: 100%;
+}
 div.grid-container{
+    min-height: 100%;
     display: grid;
-    /* grid-template-rows: 80px 540px 40px; */
     grid-template-rows: 80px auto 40px;
     grid-template-areas:
     'nav nav nav'
     'main main main'
-    /* 'info info info' */
     'footer footer footer';
     overflow: hidden;
+    grid-template-columns: 100%;
 }
 /* Navbar */
 nav{
     grid-area: nav;
     background-color: #2ecc71;
     color: black;
-    /* grid-column-gap: 5%; */
-    /* padding-left: 3%; */
     overflow: hidden;
 }
 div.nav-container{
-    /* padding-top: 13px; */
     align-items: center;
     display: grid;
     height: 100%;
     width: 80%;
     margin: 0 auto;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 20% 40% 40%;
     grid-template-areas:
-    'logo login';
+    'logo search login';
 }
 li{
     list-style: none;
 }
-
 div.nav-left{
     grid-area: logo;
     padding-left: 5%;
 }
+.nav-mid{
+    grid-area: search;
+    text-align: center;
+}
 div.nav-right{
     grid-area: login;
-    /* text-align: right; */
 }
-.nav-login table{
-    /* width: 100%; */
+.nav-right table{
     justify-items: end;
+}
+.dropdown{
+    display: none;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.dropdown-main{
+    /* display: flex; */
+    width: inherit;
+}
+.drop-btn{
+    display: none;
+    /* width: 100%; */
+    /* padding: 1em; */
+}
+.dropdown-set{
+    display: none;
+}
+.drop-img{
+    background-image: url("../assets/tony.jpg");
+    background-size: contain;
+    width: 22%;
+    height: inherit;
+    background-repeat: no-repeat;
+}
+.dropdown-set.on{
+    display: block;
+}
+.dropdown-set a{
+    display: block;
 }
 .login-wrap{
     background-color: rgb(54,171,113);
@@ -67,7 +100,7 @@ div.nav-right{
     font-weight: bold;
     line-height: 18px;
     text-align: center;
-    width: 40px;
+    width: 55px;
 }
 .register-form h1{
     font-size: 2em;
@@ -77,9 +110,6 @@ td{
     font-size: .9em;
     height: 20px;
 }
-tr td{
-    /*padding: 0 .3em;*/
-}
 .login-table input{
     height: 24px;
     padding: 3px;
@@ -87,6 +117,14 @@ tr td{
     width: 142px;
     border: 1px solid black;
     border-radius: 2px;
+}
+.search-container{
+    width: 100%;
+    display: none;
+}
+#search-bar{
+    width: 80%;
+    height: 3.2em;
 }
 /* Logout */
 button#log-out{
@@ -101,7 +139,6 @@ main{
     grid-template-areas: 'registration'
     'info';
     overflow: hidden;
-    /* background-color: rgb(30, 30, 30); */
 }
 div.main-container{
     background-color: #ecf0f1;
@@ -177,7 +214,7 @@ div.info-container{
     width: 100%;
 }
 .info-table td{
-     width: 180px; 
+     width: 180px;
 }
 .info-table img{
     width: 150px;
@@ -193,13 +230,10 @@ div.info-container{
     grid-area: moreInfo;
     background-color: #FFF;
     background-image: url("../assets/bg-img-2.jpg");
-    /* background-size: cover; */
     background-repeat: no-repeat;
-    /* width: 80%; */
 }
 .table-container{
     width: 80%;
-    /* padding: 2em; */
     margin: 0 auto;
 }
 .table-container, .table-grid{
@@ -217,7 +251,6 @@ div.info-container{
 }
 .table-description{
     grid-area: tHead;
-    /* width: 65%; */
     text-align: center;
 }
 .info-table{
@@ -226,15 +259,61 @@ div.info-container{
     align-self: normal;
 }
 .table-description{
-    /* margin: 0 auto; */
-    /* width: 540px; */
 }
 .info-img{
-    /* background-image: url("../assets/alex.jpg"); */
     background-size: cover;
     background-position: left;
     background-attachment: inherit;
 }
+
+/* News Feed */
+.news-feed{
+    grid-area: feed;
+    grid-template-areas: 'user-post'
+    'feed'
+}
+#post{
+    grid-area: user-post;
+    margin: 0 3em;
+}
+.feed-container{
+    grid-area: feed;
+}
+
+.post-container{
+    display: grid;
+    grid-template-columns: 6em auto;
+    grid-template-rows: 5em;
+    border: 1px solid black;
+}
+.user-pic{
+    max-width: 100%;
+    height: inherit;
+}
+#post, .feed-grid{
+    padding: 0 5em;
+}
+.feed-grid{
+    width: 60%;
+    margin: 0 auto;
+}
+.post-grid{
+    text-align: center;
+    margin: 2em 0;
+}
+#posts{
+    height: inherit;
+    padding: 1em;
+}
+.pro-pic{
+    background-size: cover;
+    min-height: 100%;
+    border-right: 1px solid black
+}
+/* .pro-pic img{
+    width: 5em;
+} */
+/* FOOTER  */
 footer{
     grid-area: footer;
     width: 100%;
@@ -265,10 +344,11 @@ footer-right{
 ul.footer-socials{
     display: grid;
 }
-
 ul.footer-socials{
     display: flex;
     align-items: baseline;
-    /* justify-content: space-around; */
     justify-content: space-evenly;
+}
+.hide{
+    display: none;
 }

@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>WeTune</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -14,8 +15,14 @@
                             WeTune
                         </div>
                     </div>
+                    <div class="nav-mid">
+                        <div class="search-container">
+                            <!-- <span>I</span> -->
+                            <input id="search-bar" type="text" placeholder="Search...">
+                        </div>
+                    </div>
                     <div class="nav-right">
-                        <form class="nav-login" action="user.html">
+                        <form id="login-form">
                             <table>
                                 <tr>
                                     <td>Email or Phone</td>
@@ -23,9 +30,10 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class="login-table"><input id="login-email" type="text" name="login_email"></td>
-                                    <td class="login-table"><input id="login-password" type="text" name="login_password"></td>
-                                    <td class="login-wrap"><input id="login-button" class="login-button" type="submit" name="login-button" action="/user.html"    ></td>
+                                        <!-- action="index.html" method="post" -->
+                                        <td class="login-table"><input id="login-email" type="text"></td>
+                                        <td class="login-table"><input id="login-password" type="text"></td>
+                                        <td class="login-wrap"><input id="login-button" class="login-button" type="submit"></td>
                                 </tr>
                                 <tr>
                                     <td></td>
@@ -33,6 +41,34 @@
                                 </tr>
                             </table>
                         </form>
+                        <div class="dropdown">
+                            <div id="displayName" class="drop-btn">
+                                Hello, Anthony
+                            </div>
+                            <div class="drop-btn">
+                                Edit Profile
+                            </div>
+                            <div class="drop-btn">
+                                <button id="logout" type="button" name="button">Logout</button>
+                            </div>
+                            <!-- <div class="dropdown-main">
+                                <div class="drop-img"></div>
+                                <div class="drop-btn">
+                                    Hello, Anthony
+                                </div>
+                                <div class="drop-btn">
+                                    Edit Profile
+                                </div>
+                                <div class="drop-btn">
+                                    Logout
+                                </div>
+                                <i class="fa fa-caret-down"></i>
+                            </div> -->
+                            <!-- <div class="dropdown-set">
+                                <a class="dropdown-item">Edit Profile</a>
+                                <a class="dropdown-item">Logout</a>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -40,17 +76,18 @@
                 <div class="main-container">
                     <div id="registration">
                         <div class="form-container">
-                            <form class="register-form" action="/mmp-350/weTune/user.html">
+                            <!-- form: action(url) action="/mmp-350/weTune/profile.html" -->
+                            <form class="register-form" >
                                 <h1>Create a New Account</h1>
                                 <div class="form-inputs">
-                                    <input id="sign-up-firstname"type="text" name="First Name" placeholder="First Name">
-                                    <input id="sign-up-lastname"type="text" name="Last Name" placeholder="Last Name">
-                                    <input id="sign-up-username" class="full-input" type="text" name="Username" placeholder="Username">
-                                    <input id="sign-up-email" class="full-input" name="Email" placeholder="Mobile Number or Email" value="duquea95@gmail.com">
-                                    <input id="sign-up-password" class="full-input" name="Password" placeholder="Password" value="password">
+                                    <input id="sign-up-firstname" type="text" placeholder="First Name">
+                                    <input id="sign-up-lastname"type="text" placeholder="Last Name">
+                                    <input id="sign-up-username" class="full-input" type="text" placeholder="Username">
+                                    <input id="sign-up-email" class="full-input" placeholder="Mobile Number or Email" value="duquea95@gmail.com">
+                                    <input id="sign-up-password" class="full-input" placeholder="Password" value="password">
                                     <div class="select-birthday">
                                         <h3>Birthday</h3>
-                                        <select id="birth-month" name="birth-month">
+                                        <select id="birth-month">
                                             <option value="Jan">Jan</option>
                                             <option value="Feb">Feb</option>
                                             <option value="Mar">Mar</option>
@@ -64,7 +101,7 @@
                                             <option value="Nov">Nov</option>
                                             <option value="Dec">Dec</option>
                                         </select>
-                                        <select id="birth-day" name="birth-day">
+                                        <select id="birth-day">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -97,7 +134,7 @@
                                             <option value="29">29</option>
                                             <option value="30">30</option>
                                         </select>
-                                        <select id="birth-year" name="birth-year">
+                                        <select id="birth-year">
                                             <option value="2002">2002</option>
                                             <option value="2001">2001</option>
                                             <option value="2000">2000</option>
@@ -134,7 +171,9 @@
                                         </select>
                                     </div>
                                     <p class="terms-text">By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time</p>
-                                    <input id="join-button" class="join-button" action="/mmp-350/weTune/user.html" type="submit" name="join-button">
+                                    <!-- Comment out action:URL
+                                    action="/mmp-350/weTune/profile.html" -->
+                                    <input id="join-button" class="join-button" type="submit">
                                 </div>
                             </form>
                         </div>
@@ -165,6 +204,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="news-feed">
+                    <div id="post">
+                        <div class="post-grid">
+                            <textarea id="write-post" placeholder="What's new?"></textarea>
+                            <input id="category" placeholder="Add a category">
+                            <button id="sumbit-post" name="button"></button>
+                        </div>
+                    </div>
+                    <div class="feed-container">
+                        <div class="feed-grid">
+                            <div class="post-container">
+                                <div class="user-pic">
+                                    <a href="#">
+                                        <div class="pro-pic" style="background-image: url(assets/tony.jpg)">
+                                            <!-- <img src="assets/tony.jpg" alt=""> -->
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="posts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer>
                 <div class="footer-container">
@@ -187,7 +249,7 @@
                 </div>
             </footer>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
@@ -205,5 +267,9 @@
         </script>
         <script src="js/jquery.js"></script>
         <script src="js/auth.js"></script>
+        <script src="js/post.js"></script>
+        <script src="js/create-post.js"></script>
+        <script src="js/posts.js"></script>
+        <!-- <script src="js/script.js"></script> -->
     </body>
 </html>

@@ -2,40 +2,12 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>WeTune</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="grid-container">
-            <!-- <nav class="navbar">
-                <div class="nav-container">
-                    <div class="nav-left">
-                        <div class="nav-logo">
-                            WeTune
-                        </div>
-                    </div>
-                    <div class="nav-right">
-                        <form class="nav-login" action="index.html" method="post">
-                            <table>
-                                <tr>
-                                    <td>Email or Phone</td>
-                                    <td>Password</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="login-table"><input id="login-email" type="text" name="login_email"></td>
-                                    <td class="login-table"><input id="login-password" type="text" name="login_password"></td>
-                                    <td class="login-wrap"><input class="login-button" value="Log in" type="submit" name="login-button"></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td class="forget-password">Forgot Password?</td>
-                                </tr>
-                            </table>
-                        </form>
-                    </div>
-                </div>
-            </nav> -->
             <main>
                 <div id="user-info">
                     <div id="display-name"></div>
@@ -47,7 +19,6 @@
                 <div id="profile">
                     <h1 id="profile-display-name"></h1>
                 </div>
-
             </main>
             <div id="profile">
                 <h1 id="profile-display-name"></h1>
@@ -57,7 +28,6 @@
                 </div>
                 <button id="edit">Edit</button>
             </div>
-
             <footer>
                 <div class="footer-container">
                     <div class="footer-left">
@@ -79,7 +49,7 @@
                 </div>
             </footer>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
@@ -97,6 +67,7 @@
         </script>
         <script src="js/jquery.js"></script>
         <script src="js/auth.js"></script>
-        <script src="js/profile.js"></script>
+        <script src="js/user.js"></script>
+        <!-- <script src="js/search.js"></script> -->
     </body>
 </html>
