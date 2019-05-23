@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<title>layout</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyBuziE76a1wuQSW_nYZGpwUb8BdX5Q_Eak",
+		authDomain: "wetune2.firebaseapp.com",
+		databaseURL: "https://wetune2.firebaseio.com",
+		projectId: "wetune2",
+		storageBucket: "wetune2.appspot.com",
+		messagingSenderId: "179590213655"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar">
+			<div class="nav-container">
+				<!-- title / logo -->
+				<div class="nav-left">
+					<div id="title">
+						<h1>WeTunes</h1>
+					</div>
+				</div>
+				<div class="nav-mid">
+					<div id="login">
+						<input type="text" id="login-email" placeholder="Email">
+						<input type="password" id="login-password" placeholder="Password">
+						<button id="submit-login">Login</button>
+					</div>
+
+					<!-- sign up -->
+					<div id="sign-up">
+						<input type="text" id="sign-up-username" placeholder="Username">
+						<input type="email" id="sign-up-email" placeholder="Email">
+						<input type="password" id="sign-up-password" placeholder="Password">
+						<select id="borough">
+							<option>Bronx</option>
+							<option>Brooklyn</option>
+							<option>Manhattan</option>
+							<option>Queens</option>
+							<option>Staten Island</option>
+						</select>
+						<button id="submit-sign-up">Sign Up</button>
+						<!--<p id="signup-response"></p>-->
+					</div>
+
+					<!-- navigation / menu -->
+					<div id="menu">
+						<ul id="menu-list">
+							<li><a href="">Home</a></li>
+							<li><a id="profile-link" href="">Profile</a></li>
+							<li><a href="search.html">Search</a></li>
+							<li><a href="">About</a></li>
+							<li><a href="">Users</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-right">
+					<!-- user info -->
+					<div id="user-info">
+						<div id="display-name"></div>
+						<button id="logout">Log Out</button>
+					</div>
+				</div>
+
+				<!-- login -->
+			</div>
+		</nav>
+		<main>
+			<!-- posting content -->
+			<div id="post">
+				<div class="grid-top">
+					<textarea id="write-post" placeholder="What's happening?">
+					</textarea>
+				</div>
+				<div class="grid-bottom">
+					<div class="post-tag">
+						<input id="category" placeholder="Tags">
+						<button id="submit-post">Submit</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- feed/posts/users content -->
+			<div id="posts"></div>
+		</main>
+		<footer>
+			<div class="footer-container">
+                    <div class="footer-left">
+                        <p>Copyright © 2019 - WeTunes. All rights reserved.</p>
+                    </div>
+                    <div class="footer-right">
+                        <ul class="footer-socials">
+                            <a href="">
+                                <li><span>Twitter</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Facebook</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Instagram</span></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+		</footer>
+	</div>
+	<script src="js/auth.js"></script>
+	<script src="js/post.js"></script>
+	<script src="js/create-post.js"></script>
+	<script src="js/posts.js"></script>
+</body>
+</html>

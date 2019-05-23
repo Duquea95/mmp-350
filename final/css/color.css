@@ -1,0 +1,22 @@
+:root {
+	--main-color: #000;
+	--second-color: #f277f0;
+	--button-color: #FFF;
+}
+
+#title h1 {
+	color: var(--second-color);
+}
+
+#menu a {
+	color: var(--main-color);
+}
+
+#menu a:hover {
+	background-color: var(--second-color);
+}
+
+#submit-post {
+	background-color: var(--button-color);
+	/* border: 1px solid black; */
+}

@@ -1,0 +1,70 @@
+.post {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-template-areas:
+		"photo post-text"
+		"photo post-info"
+		"likes likes";
+	grid-gap: 1em;
+	border: 1px solid black;
+}
+#category{
+	/* border: 1px solid black; */
+	text-align: center;
+	display: block;
+	width: 100%;
+	margin: 0;
+	/* text-align: center; */
+	/* width: 40%; */
+	/* -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word; */
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial; */
+    /* padding: 2px;
+	margin-top: -.3em; */
+}
+textarea {
+    /* text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui; */
+}
+
+.photo {
+	grid-area: photo;
+}
+
+.photo img {
+	width: 100%;
+}
+
+.post-text {
+	grid-area: post-text;
+}
+
+.post-info {
+	grid-area: post-info;
+}
+
+.likes {
+	grid-area: likes;
+}
+
+.like-button {
+	border: none;
+}

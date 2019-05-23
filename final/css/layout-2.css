@@ -1,0 +1,64 @@
+#posts {
+	grid-area: main;
+}
+
+#search {
+	grid-area: post;
+}
+
+.search {
+	display: flex;
+}
+
+.search input {
+	flex: 1;
+}
+
+.search button {
+	flex: max-content;
+}
+
+#post {
+	grid-area: post;
+	display: grid;
+    grid-template-areas: 'top' 'bottom';
+}
+}
+
+#login {
+	grid-area: login;
+}
+
+#sign-up {
+	grid-area: sign-up;
+}
+
+#profile {
+	grid-area: main;
+}
+
+#user-info {
+	display: none;
+	grid-area: login;
+}
+
+#add-photo,
+#edit,
+#edit-profile,
+#post {
+	display: none;
+}
+
+.is-user #add-photo,
+.is-user #edit {
+	display: block;
+}
+
+.logged-in #user-info{
+	display: block;
+}
+
+.logged-in #sign-up,
+.logged-in #login {
+	display: none;
+}
