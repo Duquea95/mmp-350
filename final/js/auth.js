@@ -63,11 +63,11 @@ const menu = document.getElementById('menu');
 function authState(user) {
 	if (user) {
 		document.body.classList.add('logged-in');
-		document.menu.classList.remove('hide');
+		menu.classList.remove('hide');
 		displayName.textContent = 'Hello, ' + user.displayName;
 		profileLink.href = '/user.html?uid=' + user.uid;
 	} else {
-		document.menu.classList.add('hide');
+		menu.classList.add('hide');
 		document.body.classList.remove('logged-in');
 
 	}
