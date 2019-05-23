@@ -8,7 +8,9 @@
 .search-main #posts{
 	grid-area: posts;
 }
-
+.search-main .post{
+	margin: 0;
+}
 .search {
 	border: 1px solid black;
 	display: grid;

@@ -22,6 +22,7 @@ button, input, input[type=file] {
 	border: 1px solid var(--accent-two);
 }
 
+
 button:focus, input:focus {
 	outline-color: var(--accent-one);
 }
@@ -169,6 +170,7 @@ ul.footer-socials{
 .search-main{
 	display: grid;
     grid-template-rows: auto auto;
+    grid-row-gap: 2em;
     grid-template-areas: 'search' 'posts';
 	padding: 2em 0;
 }
