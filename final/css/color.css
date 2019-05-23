@@ -1,11 +1,11 @@
 :root {
-	--main-color: #000;
-	--second-color: #f277f0;
-	--button-color: #FFF;
+	--main-color: #010101;
+	--second-color: #f0ece2;
+	--button-color: #69779b;
 }
 
 #title h1 {
-	color: var(--second-color);
+	color: var(--main-color);
 }
 
 #menu a {

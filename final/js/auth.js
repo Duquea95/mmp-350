@@ -6,7 +6,7 @@
 	- this happens when user logs in, signs up, or just refreshes page
 	- this displays user name and adds profile link, if user is in database and authenticated
 	log out handles log out
-	
+
 	each of these sections could be separated into separate files
 */
 
@@ -22,7 +22,7 @@ function updateUser(credential) {
 	};
 	credential.user.updateProfile(userInfo);
 	authState(credential.user);
-	
+
 	/* add user to database */
 	const db = firebase.database();
 	const ref = db.ref('users').child(credential.user.uid);
@@ -57,14 +57,19 @@ loginButton.onclick = function() {
 /* auth state */
 const displayName = document.getElementById('display-name');
 const profileLink = document.getElementById('profile-link');
+const menu = document.getElementById('menu');
+
 
 function authState(user) {
 	if (user) {
 		document.body.classList.add('logged-in');
+		document.menu.classList.remove('hide');
 		displayName.textContent = 'Hello, ' + user.displayName;
 		profileLink.href = '/user.html?uid=' + user.uid;
 	} else {
-		document.body.classList.remove('logged-in');	
+		document.menu.classList.add('hide');
+		document.body.classList.remove('logged-in');
+
 	}
 }
 
@@ -75,30 +80,3 @@ const logoutButton = document.getElementById('logout');
 logoutButton.onclick = function() {
 	firebase.auth().signOut();
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

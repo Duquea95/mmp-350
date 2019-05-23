@@ -6,6 +6,7 @@ html, body,p {
 html, body{
 	width: 100%;
 	height: 100%;
+	font-family: 'Lato', sans-serif;
 }
 li{
 	list-style: none;
@@ -14,7 +15,7 @@ li{
 /* interface elements */
 button, input, input[type=file] {
 	font-size: 1.25em;
-	font-family: inherit;
+	/* font-family: inherit; */
 	border: none;
 	margin: 0.125em;
 	padding: 0;
@@ -41,7 +42,7 @@ input.error {
 .container{
 	min-height: 100%;
 	display: grid;
-	grid-template-rows: 80px auto 40px;
+	grid-template-rows: auto auto 40px;
 	grid-template-areas:
 	'nav'
 	'main'
@@ -52,7 +53,7 @@ input.error {
 
 nav{
     grid-area: nav;
-    background-color: #acdbdf;
+    background-color: #2ecc71;
     color: black;
     overflow: hidden;
 }
@@ -112,9 +113,6 @@ main{
 #write-post, .grid-bottom, .post-tag{
 	height: 100%;
 }
-#category, #submit-post{
-	height: 50%;
-}
 #submit-post{
 	/* height: inherit; */
 	margin: 0;
@@ -128,7 +126,7 @@ main{
 footer{
     grid-area: footer;
     width: 100%;
-    background-color: #acdbdf;
+    background-color: #2ecc71;
 }
 .footer-container, .footer-container a{
     color: black;
