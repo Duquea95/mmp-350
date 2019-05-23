@@ -166,3 +166,8 @@ ul.footer-socials{
 .post-tag{
 	/* border-bottom: 1px solid; */
 }
+.search-main{
+	display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'search' 'posts';
+}

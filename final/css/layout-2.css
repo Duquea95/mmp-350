@@ -3,11 +3,17 @@
 }
 
 #search {
-	grid-area: post;
+	grid-area: search;
+}
+#search {
+	grid-area: search;
+}
+.search-main #posts{
+	grid-area: posts;
 }
 
 .search {
-	display: flex;
+	/* display: flex; */
 }
 
 .search input {
