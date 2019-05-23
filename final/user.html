@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>layout</title>
+	<title>User Profile</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,69 +23,103 @@
 	</script>
 </head>
 <body>
-	<div id="container">
-		<!-- title / logo -->
-		<div id="title">
-			<h1>My App</h1>
-		</div>
+	<div class="container">
+		<nav class="navbar">
+			<div class="nav-container">
+				<!-- title / logo -->
+				<div class="nav-left">
+					<div id="title">
+						<h1>WeTunes</h1>
+					</div>
+				</div>
+				<div class="nav-mid">
+					<div id="login">
+						<input type="text" id="login-email" placeholder="Email">
+						<input type="password" id="login-password" placeholder="Password">
+						<button id="submit-login">Login</button>
+					</div>
 
-		<!-- user info -->
-		<div id="user-info">
-			<div id="display-name"></div>
-			<button id="logout">Log Out</button>
-		</div>
+					<!-- sign up -->
+					<div id="sign-up">
+						<input type="text" id="sign-up-username" placeholder="Username">
+						<input type="email" id="sign-up-email" placeholder="Email">
+						<input type="password" id="sign-up-password" placeholder="Password">
+						<select id="borough">
+							<option>Bronx</option>
+							<option>Brooklyn</option>
+							<option>Manhattan</option>
+							<option>Queens</option>
+							<option>Staten Island</option>
+						</select>
+						<button id="submit-sign-up">Sign Up</button>
+						<!--<p id="signup-response"></p>-->
+					</div>
 
-		<!-- login -->
-		<div id="login">
-			<input type="text" id="login-email" placeholder="Email">
-			<input type="password" id="login-password" placeholder="Password">
-			<button id="submit-login">Login</button>
-		</div>
+					<!-- navigation / menu -->
+					<div id="menu"
+					class="hide">
+						<ul id="menu-list">
+							<li><a href="">Home</a></li>
+							<li><a id="profile-link" href="">Profile</a></li>
+							<li><a href="search.html">Search</a></li>
+							<li><a href="">About</a></li>
+							<li><a href="">Users</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-right">
+					<!-- user info -->
+					<div id="user-info">
+						<div id="display-name"></div>
+						<button id="logout">Log Out</button>
+					</div>
+				</div>
 
-		<!-- sign up -->
-		<div id="sign-up">
-			<input type="text" id="sign-up-username" placeholder="Username">
-			<input type="email" id="sign-up-email" placeholder="Email">
-			<input type="password" id="sign-up-password" placeholder="Password">
-			<select id="borough">
-				<option>Bronx</option>
-				<option>Brooklyn</option>
-				<option>Manhattan</option>
-				<option>Queens</option>
-				<option>Staten Island</option>
-			</select>
-			<button id="submit-sign-up">Sign Up</button>
-			<!--<p id="signup-response"></p>-->
-		</div>
+				<!-- login -->
+			</div>
+		</nav>
 
 		<!-- navigation / menu -->
-		<div id="menu">
-			<ul id="menu-list">
-				<li><a href="index.html">Home</a></li>
-				<li><a id="profile-link" href="">Profile</a></li>
-				<li><a href="">Settings</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="">Users</a></li>
-			</ul>
-		</div>
+		<main>
+			<div id="profile">
+				<h1 id="profile-display-name"></h1>
 
-		<div id="profile">
-			<h1 id="profile-display-name"></h1>
+				<div id="profile-photo">
+					<img id="profile-img">
+				</div>
+				<div id="add-photo">
+					<input type="file" id="photo-input" accept="image/jpeg, image/png, image/gif, .pdf">
+					<button id="submit-photo">Upload Photo</button>
+				</div>
 
-			<div id="profile-photo">
-				<img id="profile-img">
+				<div id="edit-profile">
+					<input id="edit-display-name" placeholder="Edit profile name"></input>
+					<button id="submit-display-name">Update</button>
+				</div>
+				<button id="edit">Edit</button>
 			</div>
-			<div id="add-photo">
-				<input type="file" id="photo-input" accept="image/jpeg, image/png, image/gif, .pdf">
-				<button id="submit-photo">Upload Photo</button>
-			</div>
+		</main>
 
-			<div id="edit-profile">
-				<input id="edit-display-name" placeholder="Edit profile name"></input>
-				<button id="submit-display-name">Update</button>
-			</div>
-			<button id="edit">Edit</button>
-		</div>
+		<footer>
+			<div class="footer-container">
+                    <div class="footer-left">
+                        <p>Copyright © 2019 - WeTunes. All rights reserved.</p>
+                    </div>
+                    <div class="footer-right">
+                        <ul class="footer-socials">
+                            <a href="">
+                                <li><span>Twitter</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Facebook</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Instagram</span></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+		</footer>
 	</div>
 	<script src="js/auth.js"></script>
 	<script src="js/profile.js"></script>
