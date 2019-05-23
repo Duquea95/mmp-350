@@ -41,7 +41,7 @@ input.error {
 .container{
 	min-height: 100%;
 	display: grid;
-	grid-template-rows: 80px auto 40px;
+	grid-template-rows: auto auto auto;
 	grid-template-areas:
 	'nav'
 	'main'
