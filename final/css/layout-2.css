@@ -5,25 +5,19 @@
 #search {
 	grid-area: search;
 }
-#search {
-	grid-area: search;
-}
 .search-main #posts{
 	grid-area: posts;
 }
 
 .search {
-	/* display: flex; */
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: 80% 20%;
+	/* grid-column-gap: 20%; */
 }
-
-.search input {
-	flex: 1;
+.search button{
+	border-left: 1px solid black;
 }
-
-.search button {
-	flex: max-content;
-}
-
 #post {
 	grid-area: post;
 	display: grid;

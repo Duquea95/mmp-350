@@ -14,9 +14,20 @@
 
 #menu a:hover {
 	background-color: var(--second-color);
+	transition:
 }
 
 #submit-post {
 	background-color: var(--button-color);
 	/* border: 1px solid black; */
+}
+.search button:hover{
+	background-image: linear-gradient(to right,
+    transparent,
+    transparent 50%,
+    var(--button-color) 50%,
+    var(--button-color));
+  	background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
 }
