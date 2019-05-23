@@ -62,7 +62,7 @@ nav{
     height: 100%;
     width: 80%;
     margin: 0 auto;
-    grid-template-columns: 14em auto auto;
+    grid-template-columns: auto auto auto;
     grid-template-areas:
     'logo user login';
 }
